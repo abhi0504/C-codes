@@ -1,0 +1,62 @@
+#include<fstream.h>
+#include<conio.h>
+#include<stdio.h>
+class stud
+{  char Name[25];
+   int  rno;
+   int  marks;
+   char grade;
+   public:
+	void enter()
+	{
+	   cout<<"\n Enter Name: ";
+	   gets(Name);
+	   cout<<" Enter Roll No: ";
+	   cin>>rno;
+	   cout<<" Enter Marks: ";
+	   cin>>marks;
+	}
+	void calcgrade()
+	{   if(marks<=100&&marks>=90)
+		 grade='A';
+	     else if(marks<=89&&marks>=80)
+		 grade='B';
+	     else if(marks<=79&&marks>=70)
+		 grade='C';
+	     else if(marks<=69&&marks>=60)
+		 grade='D';
+	     else if(marks<=59&&marks>=50)
+		 grade='E';
+	     else if(marks<=49&&marks>=40)
+		 grade='F';
+	     else
+		 grade='G';
+	     return;
+	}
+	void disp()
+	{  calcgrade();
+	   cout<<"\n\t\tStudent Details:";
+	   cout<<"\n Name: ";
+	   cout<<Name;
+	   cout<<"\n Roll No: ";
+	   cout<<rno;
+	   cout<<"\n Marks: ";
+	   cout<<marks;
+	   cout<<"\n Grade: ";
+	   cout<<grade;
+	}
+	int getrno()
+	{  return rno;
+	}
+}s;
+void main()
+{
+ clrscr();
+ fstream f("DATA.DAT",ios::binary|ios::in|ios::out);
+ cout<<"Enter the Details :";
+ s.enter();
+ cout<<"The Details that will be written in file :";
+ s.disp();
+ f.write((char*)&s,sizeof(s));
+ getch();
+}

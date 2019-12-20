@@ -1,0 +1,277 @@
+//menu driven for 1 d array
+//date 25 march 2017
+#include<iostream.h>
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+int a[20],b[20],c[40];
+int m,n,p,val,i,j,key,pos,temp;
+/*Function Prototype*/
+void create();
+void search();
+void insert();
+void Delete();
+void display();
+void exit();
+int main()
+{       clrscr();
+	int choice;
+	do{
+		cout<<"\n\n--------Menu-----------\n";
+		cout<<"1.Create\n";
+		cout<<"3.Insert\n";
+		cout<<"2.Delete\n";
+		cout<<"4.Search\n";
+		cout<<"5.display\n";
+		cout<<"6.exit\n";
+		cout<<"-----------------------)";
+		cout<<"\nEnter your choice:\t";
+		cin>>choice;
+		switch(choice)
+		{
+			case 1:         create();
+					break;
+			case 2:
+					Delete();
+					break;
+			case 3:         insert();
+					break;
+
+			case 4:         search();
+					break;
+
+			case 5:         display();
+					break;
+
+			case 6:         exit(0);
+					break;
+			default:        cout<<"invalid choice\n";
+		 }
+		       }	while(choice!=6);
+			return 0;
+		       }
+void create() //creating an array
+{
+	cout<<"\nEnter the size of the array elements:\t";
+	cin>>n;
+	cout<<"\nEnter the elements for the array:\n";
+	for(i=0;i<n;i++)
+	{
+		cin>>a[i];
+	}
+}//end of create()
+void insert()   //inserting an element in to an array
+{
+    cout<<"\nEnter the position for the new element:\t";
+    cin>>pos;
+    cout<<"\nEnter the element to be inserted :\t";
+    cin>>val;
+    for(i=n-1;i>=pos;i--)
+	{
+		a[i+1]=a[i];
+	}
+	a[pos]=val;
+	n=n+1;
+}//end of insert()
+void Delete()      //deleting an array element
+{
+	cout<<"\nEnter the position of the element to be deleted:\t";
+	cin>>pos;
+	val=a[pos];
+	for(i=pos;i<n-1;i++)
+	{
+		a[i]=a[i+1];
+	}
+	n=n-1;
+	cout<<"\nThe deleted element is ="<<val;
+}//end of delete()
+void search()   //searching an array element
+{
+	cout<<"\nEnter the element to be searched:\t";
+	cin>>key;
+	for(i=0;i<n;i++)
+	{
+		if(a[i]==key)
+		{
+			cout<<"\nThe element is present at position ",i;
+			break;
+		}
+	}
+	if(i==n)
+	{
+		cout<<"\nThe search is unsuccessful";
+	}
+}//end of search
+void display()  //displaying an array elements
+{
+	int i;
+	cout<<"\nThe array elements are:\n";
+	for(i=0;i<n;i++){
+		 cout<<"\t\n"<<a[i];
+	 }
+ }//end of display()
+/*output
+--------Menu-----------
+1.Create
+3.Insert
+2.Delete
+4.Search
+5.display
+6.exit
+-----------------------)
+Enter your choice:      1
+
+Enter the size of the array elements:   5
+
+Enter the elements for the array:
+1
+2
+3
+4
+5
+
+1.Create
+3.Insert
+2.Delete
+4.Search
+5.display
+6.exit
+-----------------------)
+Enter your choice:      3
+
+Enter the position for the new element: 5
+
+Enter the element to be inserted :      6
+
+
+--------Menu-----------
+1.Create
+3.Insert
+2.Delete
+4.Search
+5.display
+6.exit
+-----------------------)
+Enter your choice:      5
+
+The array elements are:
+
+1
+2
+3
+4
+5
+6
+
+--------Menu-----------
+1.Create
+3.Insert
+2.Delete
+4.Search
+5.display
+6.exit
+-----------------------)
+Enter your choice:      2
+
+Enter the position of the element to be deleted:        1
+
+The deleted element is = 2
+
+--------Menu-----------
+1.Create
+3.Insert
+2.Delete
+4.Search
+5.display
+6.exit
+-----------------------)
+Enter your choice:      5
+
+The array elements are:
+
+1
+3
+4
+5
+6
+
+
+--------Menu-----------
+1.Create
+3.Insert
+2.Delete
+4.Search
+5.display
+6.exit
+-----------------------)
+Enter your choice:      1
+
+Enter the size of the array elements:   5
+
+Enter the elements for the array:
+1
+2
+3
+4
+5
+
+
+--------Menu-----------
+1.Create
+3.Insert
+2.Delete
+4.Search
+5.display
+6.exit
+-----------------------)
+Enter your choice:      4
+
+Enter the element to be searched:       4
+
+The element is present at position   5
+
+--------Menu-----------
+1.Create
+3.Insert
+2.Delete
+4.Search
+5.display
+6.exit
+-----------------------)
+Enter your choice:    6
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

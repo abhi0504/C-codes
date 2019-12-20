@@ -1,0 +1,11 @@
+//Q-25
+#include<iostream.h>
+#include<conio.h>
+void main()
+{clrscr();
+char ch='\n';
+int a=ch;
+cout<<"The ASCII code of ch is"<<a;
+getch();
+}
+

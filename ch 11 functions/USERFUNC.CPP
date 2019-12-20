@@ -1,0 +1,19 @@
+//user bdefined function
+// return without argument
+#include<iostream.h>
+#include<conio.h>
+	int sum(int a,int b)
+{
+
+	int c=a*b;
+
+	return c;
+}
+void main()
+{clrscr();
+int p,q,r;
+cin>>p>>q;
+r=sum(p,q);
+cout<<"\n\n\tsum\n\n\t"<<r;
+getch();
+}

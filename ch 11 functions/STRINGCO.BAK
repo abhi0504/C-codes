@@ -1,0 +1,25 @@
+//uppercase
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<ctype.h>
+#include<stdio.h>
+void main()
+{
+	clrscr();
+	char char1[20],char2[20];
+      //	int strcmp(char[20],char[99]);
+	cout<<"\n\n\t\tEnter Two Strings\n\n\t\t";
+	cin>>char1>>char2;
+	int c=strcmp(char1,char2);
+	if(c>0)
+	cout<<"\n\n\t\tc is the LONGEST\n\n\t\t";
+	else
+	if(c==0)
+	cout<<"\n\n\t\tc is EQUAL\n\n\t\t";
+	else
+	if(c<0)
+	cout<<"\n\n\t\tc is SHORTEST\n\n\t\t";
+	getch();
+}
