@@ -1,0 +1,90 @@
+//DATE 30 JUNE 2017
+//QUESTION NO. 4 PG 242
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+	
+	class CABS
+	 { int cno,PKM,dist;
+	    char type;
+	     void charges()
+	    {
+	      if(type=='A')
+	       PKM=25;
+	      else if(type=='B')
+	       PKM=20;
+	      else if(type=='C')
+	       PKM=15;
+	     }
+	 
+	public : CABS()
+	 {
+	   type='A';
+	    cno=1111;
+	 }
+	      void Register();
+	      void Showcab();
+	   };
+
+	  void CABS::Register()
+	   {
+	    cout<<"\nEnter city type";
+	     cin>>type;
+	       cout<<"\nEnter the distance travelled" ;
+		cin>>dist;
+		 cout<<"\n The per km charges is:";
+		  cin>>PKM;
+		   charges();
+	   }
+
+	   void CABS::Showcab()
+	    {
+	       cout<<"\n The cab number is:"<<cno;
+		cout<<"\n The city is :"<<type;
+		 cout<<"\n The per km charges is:"<<PKM;
+		  cout<<"\n The amount is :"<<PKM*dist;
+	     }
+	
+	 void main()
+	  {
+	   clrscr();
+	    CABS c;
+	     c.Register();
+	      c.Showcab();
+	       getch();
+	   }
+       
+
+
+
+
+
+/*output
+    Enter per km charges 10
+
+    Enter city type a
+
+    Enter the distance travelled 108
+
+     The cab number is:1111
+     The city is:a
+     The per kilometer is:10
+     The amount is:1080
+
+      */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

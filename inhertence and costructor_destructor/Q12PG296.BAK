@@ -1,0 +1,56 @@
+//q 12 pg 294
+//date 11 july 2017
+#include<iostream.h>
+#include<conio.h>
+	 class A
+	{
+	 public :
+	 A() {cout<<"\n\tAn\t";}
+
+	~A()
+	{
+	 cout<<"\n\tclass a\n\t";
+	}
+	};
+
+	class B
+	 {
+	  public :
+	  B(){cout<<"\n\tB\n\t";}
+	  ~B(){cout<<"\n\t~B\n\t";}
+	 };
+
+	 class C
+	  {
+	   public :
+	   C(){cout<<"\n\tC\n\t";}
+	   ~C(){cout<<"\n\t~C\n\t";}
+	   private :
+	    B c1;
+	    A c2;
+	   };
+
+	 class  D
+	  {
+	   public:
+	    D(){cout<<"\t\nD\n\t";}
+	    ~D(){cout<<"\n\t~D\n\t";}
+	  };
+
+	 class E : public C
+	  {
+	   public:
+	    E(){cout<<"\n\tE\n\t";}
+	    ~E(){cout<<"\n\t~E\n\t";}
+	   private :
+	    D e1;
+	    C e2;
+	  };
+	  int main()
+	   {
+	    clrscr();
+	    E e ;
+	   getch();
+	   return 0;
+	   }
+
